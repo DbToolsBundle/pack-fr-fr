@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DbToolsBundle\PackExample\Tests;
+namespace DbToolsBundle\PackFrFR\Tests;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
