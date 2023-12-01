@@ -48,7 +48,7 @@ class PhoneNumberAnonymizerTest extends FunctionalTestCase
         $config->add(new AnonymizerConfig(
             'table_test',
             'data',
-            'fr_fr.phone',
+            'fr-fr.phone',
             new Options()
         ));
 
