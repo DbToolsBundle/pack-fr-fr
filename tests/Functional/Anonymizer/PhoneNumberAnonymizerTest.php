@@ -9,7 +9,7 @@ use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizator;
 use MakinaCorpus\DbToolsBundle\Anonymization\Config\AnonymizerConfig;
 use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizer\AnonymizerRegistry;
 use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizer\Options;
-use DbToolsBundle\PackFrFR\Tests\FunctionalTestCase;
+use MakinaCorpus\DbToolsBundle\Test\FunctionalTestCase;
 
 class PhoneNumberAnonymizerTest extends FunctionalTestCase
 {

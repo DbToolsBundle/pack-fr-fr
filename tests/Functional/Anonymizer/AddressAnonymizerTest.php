@@ -9,7 +9,7 @@ use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizator;
 use MakinaCorpus\DbToolsBundle\Anonymization\Config\AnonymizerConfig;
 use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizer\AnonymizerRegistry;
 use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizer\Options;
-use DbToolsBundle\PackFrFR\Tests\FunctionalTestCase;
+use MakinaCorpus\DbToolsBundle\Test\FunctionalTestCase;
 
 class AddressAnonymizerTest extends FunctionalTestCase
 {
@@ -59,7 +59,7 @@ class AddressAnonymizerTest extends FunctionalTestCase
         $config->add(new AnonymizerConfig(
             'table_test',
             'data',
-            'fr_fr.address',
+            'fr-fr.address',
             new Options([
                 'street_address' => 'my_street_address',
                 'secondary_address' => 'my_secondary_address',
@@ -72,7 +72,7 @@ class AddressAnonymizerTest extends FunctionalTestCase
 
         $anonymizator = new Anonymizator(
             $this->getConnection(),
-            new AnonymizerRegistry(),
+            new AnonymizerRegistry(null, [\dirname(\dirname(\dirname(__DIR__))) . '/src/']),
             $config
         );
 

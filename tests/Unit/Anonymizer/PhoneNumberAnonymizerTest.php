@@ -6,7 +6,7 @@ namespace DbToolsBundle\PackFrFR\Tests\Unit\Anonymizer;
 
 use DbToolsBundle\PackFrFR\Anonymizer\PhoneNumberAnonymizer;
 use MakinaCorpus\DbToolsBundle\Anonymization\Anonymizer\Options;
-use DbToolsBundle\PackFrFR\Tests\UnitTestCase;
+use MakinaCorpus\DbToolsBundle\Test\UnitTestCase;
 
 class PhoneNumberAnonymizerTest extends UnitTestCase
 {
