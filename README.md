@@ -13,7 +13,7 @@ This pack provides:
 Run the following command to add this pack to your application:
 
 ```sh
-composer require dbtoolsbundle/pack-fr-fr
+composer require db-tools-bundle/pack-fr-fr
 ```
 
 Learn more about how to use this package reading [the DbToolsBundle documentation](https://dbtoolsbundle.readthedocs.io/) on Read the Docs.

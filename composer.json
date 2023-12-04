@@ -1,5 +1,5 @@
 {
-    "name": "dbtoolsbundle/pack-fr-fr",
+    "name": "db-tools-bundle/pack-fr-fr",
     "description": "A pack of anonymizers for fr-FR locale",
     "type": "db-tools-bundle-pack",
     "license": "MIT",
