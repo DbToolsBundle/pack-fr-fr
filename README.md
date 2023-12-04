@@ -1,6 +1,3 @@
-[![Coding standards](https://github.com/DbToolsBundle/pack-fr-fr/actions/workflows/coding-standards.yml/badge.svg)](https://github.com/DbToolsBundle/pack-fr-fr//actions/workflows/coding-standards.yml) [![Static Analysis](https://github.com/DbToolsBundle/pack-fr-fr/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/DbToolsBundle/pack-fr-fr/actions/workflows/static-analysis.yml) [![Continuous Integration](https://github.com/DbToolsBundle/pack-fr-fr/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/DbToolsBundle/pack-fr-fr/actions/workflows/continuous-integration.yml)
-
-
 # DbToolsBundle - Pack fr-Fr
 A pack of anonymizers for fr-FR locale
 
