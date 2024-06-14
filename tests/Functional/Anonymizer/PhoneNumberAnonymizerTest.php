@@ -53,20 +53,19 @@ class PhoneNumberAnonymizerTest extends FunctionalTestCase
         ));
 
         $anonymizator = new Anonymizator(
-            $this->getConnection(),
+            $this->getDatabaseSession(),
             new AnonymizerRegistry(),
             $config
         );
 
         $this->assertSame(
             "0234567834",
-            $this->getConnection()->executeQuery('select data from table_test where id = 1')->fetchOne(),
+            $this->getDatabaseSession()->executeQuery('select data from table_test where id = 1')->fetchOne(),
         );
 
-        foreach ($anonymizator->anonymize() as $message) {
-        }
+        $anonymizator->anonymize();
 
-        $datas = $this->getConnection()->executeQuery('select data from table_test order by id asc')->fetchFirstColumn();
+        $datas = $this->getDatabaseSession()->executeQuery('select data from table_test order by id asc')->fetchFirstColumn();
         $this->assertNotNull($datas[0]);
         $this->assertNotSame('0234567834', $datas[0]);
         $this->assertNotNull($datas[1]);

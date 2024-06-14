@@ -71,20 +71,19 @@ class AddressAnonymizerTest extends FunctionalTestCase
         ));
 
         $anonymizator = new Anonymizator(
-            $this->getConnection(),
+            $this->getDatabaseSession(),
             new AnonymizerRegistry(null, [\dirname(\dirname(\dirname(__DIR__))) . '/src/']),
             $config
         );
 
         $this->assertSame(
             "Rue Aristide Briand",
-            $this->getConnection()->executeQuery('select my_street_address from table_test where id = 1')->fetchOne(),
+            $this->getDatabaseSession()->executeQuery('select my_street_address from table_test where id = 1')->fetchOne(),
         );
 
-        foreach ($anonymizator->anonymize() as $message) {
-        }
+        $anonymizator->anonymize();
 
-        $datas = $this->getConnection()->executeQuery('select * from table_test order by id asc')->fetchAllAssociative();
+        $datas = $this->getDatabaseSession()->executeQuery('select * from table_test order by id asc')->fetchAllAssociative();
         $this->assertNotNull($datas[0]);
         $this->assertNotSame('Rue Aristide Briand', $datas[0]['my_street_address']);
         $this->assertNotSame('La maison aux volets bleus', $datas[0]['my_secondary_address']);

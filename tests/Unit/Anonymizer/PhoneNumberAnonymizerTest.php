@@ -17,7 +17,7 @@ class PhoneNumberAnonymizerTest extends UnitTestCase
         $instance = new PhoneNumberAnonymizer(
             'some_table',
             'phone_column',
-            $this->getConnection(),
+            $this->getDatabaseSession(),
             new Options(),
         );
 
@@ -29,7 +29,7 @@ class PhoneNumberAnonymizerTest extends UnitTestCase
             set
                 "phone_column" = case
                     when "some_table"."phone_column" is not null
-                        then #1 || lpad(cast(floor(random() * (cast(#2 as int) - #3 + 1) + #4) as varchar), #5, #6)
+                        then #1 || lpad(cast(floor(random() * (cast(#2 as int) - #3 + 1) + #4) as varchar),cast(#5 as int),cast(#6 as varchar))
                     else null
                 end
             SQL,
