@@ -6,3 +6,5 @@
 /phpunit.xml
 /vendor/
 test_db
+/test
+/test_ db.sqlite

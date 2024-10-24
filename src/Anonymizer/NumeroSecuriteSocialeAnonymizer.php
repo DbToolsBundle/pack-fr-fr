@@ -37,7 +37,7 @@ class NumeroSecuriteSocialeAnonymizer extends AbstractAnonymizer
                     $expr->lpad($this->getRandomIntExpression(4), 1, '0'),
                     $expr->lpad($this->getRandomIntExpression(9), 1, '0'),
                     $expr->lpad($this->getRandomIntExpression(9), 1, '0'),
-                    // 13 correspond aux caractères 4 et 5 soit le mois de l'année 13=impossible
+                    //The 13 corresponds to the 4th and 5th characters, which represent the month of the year. However, 13 is not a valid month, so this would not be a valid social security number.
                     '13',
                     $expr->lpad($this->getRandomIntExpression(999999999), 10, '0'),
 
