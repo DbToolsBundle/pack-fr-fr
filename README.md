@@ -8,6 +8,7 @@ This pack provides:
 * `fr-fr.lastname`: Anonymize with a random french last names from a sample of ~500 items
 * `fr-fr.phone`: Anonymize french telephone numbers, (only option is `mode`: `mobile` or `landline`)
 * `fr-fr.secu`: Anonymize french social sécurity numbers 
+* `fr-fr.cb` : Anonymize credit card numbers with a sample of 40 items
 
 ## Installation
 
